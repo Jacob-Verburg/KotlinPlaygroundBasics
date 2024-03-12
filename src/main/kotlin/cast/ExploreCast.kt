@@ -20,7 +20,8 @@ fun checkType(type: Any) {
 fun castNumber(any: Any) {
 
     when(any){
-        any as Double -> println("value is Double")
+        any as? Double -> println("value is Double")
+        any as? Int -> println("value is Int")
     }
 
 }
@@ -35,7 +36,7 @@ fun main(){
     checkType("BOB")
 
     castNumber(1.0)
-   // castNumber(1)
+    castNumber(1)
 
     val number = 1
     val numberDouble = number.toDouble()
